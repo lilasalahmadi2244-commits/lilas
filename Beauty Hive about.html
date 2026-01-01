@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
+    <title>Beauty Hive</title>
+    <style>
+        body {
+            margin: 0;
+            .playwrite-nz-guides-regular {
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        }
+
+        .header {
+            background-color: #ec93d1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+        }
+
+        .logo {
+            width: 100px;
+        }
+        .header-link a {
+        color: white;
+        padding: 5px 15px;
+        text-decoration: none;
+        border-radius: 15px;
+        }
+        .header-link a:hover {
+        background-color: #ac6897;
+        color: white;
+        }
+        .header-link button{
+            background-color: #cf4cc9;
+          border-radius: 15px;  padding: 5px 15px;
+            border: 0;
+            color: white;
+
+
+        }
+        .header-link button:hover{
+            background-color: aliceblue;
+        }
+        .Landingpage{
+        background-color: #ec93d1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        border-radius:0 0 50px 50px ;
+        }
+     .Landingpage-search input{
+        border-radius:  50px ;
+        border: none;
+        outline:none;
+        height:25px;
+        padding-left:10px ;
+        padding-right:0 10px ;
+     }
+.Landingpage-search button{
+    position: absolute;
+  left: 200px;
+  height: 30px;
+  background-color: #cf4cc9;
+border-radius: 30px; 
+ padding: 0 15px;
+            border: 0;
+            color: white;
+}
+.Landingpage-img-contaner{
+    border-radius: 20px;
+   
+}
+.Landingpage-left-section{
+    width:350px ;
+}
+ .makeup-conainer{
+    padding:25px 50px;
+ }
+  .makeup.header{
+     display: flex;
+   justify-content: space-between;
+   align-items: center;
+    margin:0 ;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+  }
+  .makeup.header h2{
+  margin: 0;
+  color: #000;
+  }
+  .makeup-conainerspam{
+color:#fcfbfb;
+text-transform: uppercase;
+font-size:14px;
+  }
+  .makeup-info{
+    display: flex;
+justify-content: space-between;
+background-color: white;
+
+
+  }
+  .card{
+    width: 300px;
+    padding: 20px;
+  }
+ .card-info img{
+ width: 40px;
+   
+ }
+ .card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.35);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+    .btn{
+         background:white;
+            color: white 
+            padding 5px 15px;
+            border-radius: 10px;
+            border: 0;
+    }
+    .cardname{
+margin: 0;
+        color: #000;
+        font-size: 18px;
+        font-weight:bold;
+    }
+.card-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 15px;
+    margin-top: -5px;
+    width: 100%;
+    max-width: 170px;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card-info h3 {
+    margin: 0;
+}
+
+.card-info img {
+    width: 45px;
+}
+
+
+.card-info h3 {
+    margin: 0;
+}
+.card-info img {
+    width: 25px;
+}
+.makeup-cards-blusher{
+    display: flex;
+    gap:12px;
+
+}
+.makeup-cards {
+    display: flex;      
+    gap: 0;       
+}
+.makeup-cards-Concealer{
+    display: flex;      
+    gap: 0;       
+}
+.makeup-cards-row {
+    display: flex;       
+    gap: 5px;          
+    margin-bottom: 20px; 
+}
+
+.makeup-header button {
+    background-color: #cf4cc9;
+    color: white;
+    border: 0;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.makeup-header button:hover {
+    background-color: #ac6897;
+}
+.makeup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+.makeup-header h2 {
+    margin: 0;
+    color: #000;
+}
+
+.views-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #cf4cc9;
+    cursor: pointer;
+}
+.views-text:hover {
+    color: #ac6897;
+}
+.makeup-all-products .makeup-cards-row {
+    margin-bottom: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <script>
+const viewAllBtn = document.getElementById("view-all-btn");
+const allProductsDiv = document.querySelector(".makeup-all-products");
+
+viewAllBtn.addEventListener("click", function() {
+    if(allProductsDiv.style.display === "none") {
+        allProductsDiv.style.display = "block"; // يظهر كل المنتجات
+    } else {
+        allProductsDiv.style.display = "none"; // يخفّي إذا ضغط مرة ثانية
+    }
+});
+</script>
+
+    <!--HEADER-->
+    <div class="header">
+        <img class="logo" src="logo5/logo remve.png">
+        <div class="header-link">
+            <a class="link" href="file:///C:/Users/PC/Desktop/Beauty%20Hive%20about.html">Home</a>
+            <a class="link" href="file:///C:/Users/PC/Desktop/about.html">About</a>
+
+            <a class="link" href="file:///C:/Users/PC/Desktop/sign.html"><button>Sign in</button></a>
+        </div>
+    </div>
+    <!--Landing page-->
+    <div class="Landingpage">
+        <div class="Landingpage-left-section">
+            <h1>welcom to Beauty Hive</h1>
+            <h2>With us, you’ll discover the best and most beautiful makeup products.</h2>
+            <p>Here, beauty meets elegance, and every product is carefully chosen to make you shine with confidence.</p>
+        <div class="Landingpage-search">
+            <input placeholder="start typing..."/>
+         <button>SEARCH</button>
+        </div>
+    </div>
+    <div class="Landingpage-img-contaner">
+            <img src="logo5/logo remve.png"width="300">
+
+         </div>
+    </div>
+    <!--makeup-->
+    <div class="makeup-conainer">
+    
+       <div class="makeup-all-products" style="display:none;">
+    <div class="makeup-cards-row">
+        <!-- Blusher, Highlighter, Lip Combo -->
+    </div>
+    <div class="makeup-cards-row">
+        <!-- Gloss, Concealer, Powder -->
+    </div>
+</div>
+<div class="makeup-header">
+    <h2>Make Up</h2>
+    <button id="view-all-btn">View All</button>
+</div>
+
+     <div class="makeup-cards-row">
+            <div class="card">
+                <img src="blusher/رئيسيه.jpeg" width="200" alt="Blusher">
+                <div class="card-info">
+                   <a href="file:///C:/Users/PC/Desktop/blusher/Concealer.html"> <h3>Blusher</h3></a>
+                    <img src="logo5/سله.png" alt="cart">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="hilight/logo hiligt.jpg" width="200" alt="Highlighter">
+                <div class="card-info">
+                    <a href="file:///C:/Users/PC/Desktop/Highlighter.html"><h3>Highlighter</h3></a>
+                    <img src="logo5/سله.png" alt="cart">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="lip cobo/logo lip .jpeg" width="200" alt="Lib Combo">
+                <div class="card-info">
+                   <a href="file:///C:/Users/PC/Desktop/Lib%20Combo.html"> <h3>Lib Combo</h3></a>
+                    <img src="logo5/سله.png" alt="cart">
+                </div>
+            </div>
+        </div>
+   <div class="makeup-cards-row">
+            <div class="card">
+                <img src="gloss/logo gloss.jpg" width="200" alt="Gloss">
+                <div class="card-info">
+                   <a href="file:///C:/Users/PC/Desktop/Gloss.html"> <h3>Gloss</h3></a>
+                    <img src="logo5/سله.png" alt="cart">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="concel/logo conser.jpg" width="200" alt="Concealer">
+                <div class="card-info">
+                   <a href="file:///C:/Users/PC/Desktop/Concealer.html"> <h3>Concealer</h3></a>
+                    <img src="logo5/سله.png" alt="cart">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="boder/logo bode.jpeg" width="200" alt="Boder">
+                <div class="card-info">
+                    <a href="file:///C:/Users/PC/Desktop/Boder.html"><h3>Powder</h3></a>
+                    <img src="logo5/سله.png" alt="cart">
+                </div>
+            </div>
+        </div>
+</body>
+</body>
